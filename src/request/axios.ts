@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-axios.defaults.withCredentials = true
-
 const service = axios.create({
   baseURL: 'http://localhost:8000/',
   timeout: 5000
@@ -9,6 +7,11 @@ const service = axios.create({
 
 service.interceptors.request.use(
   config => {
+    const token = localStorage.getItem('token')
+    config.headers = {
+      'Content-Type': 'application/json',
+      token: token
+    }
     return config
   }, error => {
     console.log(error)
