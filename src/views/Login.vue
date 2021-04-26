@@ -11,29 +11,16 @@
       </el-form-item>
 
     </el-form>
-      <el-table
-        :data="books">
-        <el-table-column prop="uuid" label="uuid"></el-table-column>
-        <el-table-column prop="book_name" label="book_name"></el-table-column>
-        <el-table-column prop="author" label="author"></el-table-column>
-        <el-table-column prop="price" label="price"></el-table-column>
-        <el-table-column prop="introduction" label="introduction"></el-table-column>
-
-      </el-table>
-      <p>{{ $t('home.home') }}</p>
     <button @click="login">LOGIN</button>
-    <button @click="logout">LOGOUT</button>
-    <button @click="getAllBooks">GET_BOOKS</button>
   </div>
 </template>
 
 <script lang="ts">
-import { createToken, getBooks } from '@/request/api'
+import { createToken } from '@/request/api'
 import { reactive, onMounted, defineComponent, toRefs } from 'vue'
-import router from '@/router'
 
 export default defineComponent({
-  name: 'Api',
+  name: 'Login',
   components: {},
   'setup' () {
     const state = reactive({
@@ -71,22 +58,9 @@ export default defineComponent({
       })
     }
 
-    const logout = () => {
-      localStorage.removeItem('token')
-      router.push('/')
-    }
-
-    const getAllBooks = () => {
-      getBooks().then((res) => {
-        state.books = res.data.data.list
-      })
-    }
-
     return {
       ...toRefs(state),
-      login,
-      logout,
-      getAllBooks
+      login
     }
   }
 })

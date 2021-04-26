@@ -1,18 +1,81 @@
 <template>
   <el-container>
+
     <el-header>
-      <div id="nav">
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link> |
-        <router-link to="/api">Api</router-link>
-      </div>
+      <el-menu
+        :default-active="activeIndex"
+        class="el-menu--horizontal"
+        mode="horizontal"
+        background-color="#545c64"
+        text-color="#fff"
+        active-text-color="#ffd04b">
+        <el-menu-item index="1" @click="toHome">
+          Home
+        </el-menu-item>
+        <el-submenu index="2">
+          <template #title>About</template>
+          <el-menu-item index="2-1" @click="toAbout">about1</el-menu-item>
+          <el-menu-item index="2-2">about2</el-menu-item>
+          <el-menu-item index="2-3">about3</el-menu-item>
+        </el-submenu>
+        <el-menu-item index="3" disabled>消息中心</el-menu-item>
+        <el-menu-item index="4" @click="toLogin">
+          Login
+        </el-menu-item>
+        <el-menu-item index="5" @click="toBooks">
+          Books
+        </el-menu-item>
+        <el-submenu index="6">
+          <template #title>Lang</template>
+          <el-menu-item index="6-1" @click="changeLangZh">zh</el-menu-item>
+          <el-menu-item index="6-2" @click="changeLangEn">en</el-menu-item>
+        </el-submenu>
+      </el-menu>
+      <div class="line"></div>
     </el-header>
+
     <el-main>Main
     <router-view/>
     </el-main>
+
     <el-footer>Footer</el-footer>
+
   </el-container>
 </template>
+
+<script lang="ts">
+import i18n from '@/languages'
+import router from '@/router'
+
+export default {
+  /* eslint-disable  @typescript-eslint/explicit-module-boundary-types */
+  data () {
+    return {
+      activeIndex: '1'
+    }
+  },
+  methods: {
+    toHome () {
+      router.push('/')
+    },
+    toLogin () {
+      router.push('/login')
+    },
+    toAbout () {
+      router.push('/about')
+    },
+    toBooks () {
+      router.push('/books')
+    },
+    changeLangZh () {
+      i18n.global.locale = 'zh'
+    },
+    changeLangEn () {
+      i18n.global.locale = 'en'
+    }
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
