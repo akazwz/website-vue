@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <p>{{ $t('home.test') }}</p>
+    <p>{{ $t('home.home') }}</p>
   </div>
 </template>
 
