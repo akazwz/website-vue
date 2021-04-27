@@ -1,7 +1,8 @@
 <template>
   <el-carousel indicator-position="outside">
     <el-carousel-item v-for="item in 4" :key="item">
-      <h3>{{ item }}</h3>
+      <h6>{{ item }}</h6>
+      <a href="https://baidu.com">baidu</a>
     </el-carousel-item>
   </el-carousel>
   <p>{{ $t('main.home') }}</p>
@@ -11,13 +12,23 @@
 </template>
 
 <script lang="ts">
-import { Options, Vue } from 'vue-class-component'
+import { defineComponent } from 'vue'
 
-@Options({
-  components: {
+export default defineComponent({
+  name: 'Home',
+  components: {},
+  data () {
+    return {
+      carouselImages: this.getCarouseImages()
+    }
+  },
+  methods: {
+    getCarouseImages (): [] {
+      return []
+    }
   }
+
 })
-export default class Home extends Vue {}
 </script>
 
 <style lang="scss">

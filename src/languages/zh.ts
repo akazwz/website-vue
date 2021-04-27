@@ -5,7 +5,8 @@ module.exports = {
       about: '关于',
       login: '登陆',
       books: '图书',
-      lang: '语言'
+      lang: '语言',
+      file: '文件'
     }
   },
   main: {

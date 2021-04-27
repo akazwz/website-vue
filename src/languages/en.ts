@@ -5,7 +5,8 @@ module.exports = {
       about: 'About',
       login: 'Login',
       books: 'Books',
-      lang: 'Languages'
+      lang: 'Languages',
+      file: 'File'
     }
   },
   main: {

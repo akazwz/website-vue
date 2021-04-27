@@ -24,6 +24,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/books',
     name: 'Books',
     component: () => import(/* webpackChunkName: "api" */ '../views/Books.vue')
+  },
+  {
+    path: '/file-upload',
+    name: 'FileUpload',
+    component: () => import(/* webpackChunkName: "api" */ '../components/UploadFIle.vue')
   }
 ]
 
