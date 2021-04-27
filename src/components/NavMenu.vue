@@ -63,7 +63,6 @@ export default defineComponent({
   },
   computed: {
     revNavItems ():{ name: string; index: string; }[] {
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
       return this.navItems.slice().reverse()
     }
   },
@@ -80,6 +79,6 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang="scss">
 
 </style>
