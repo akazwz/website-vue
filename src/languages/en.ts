@@ -1,6 +1,15 @@
 module.exports = {
-  home: {
-    home: 'home',
-    about: 'about'
+  header: {
+    menu: {
+      home: 'Home',
+      about: 'About',
+      login: 'Login',
+      books: 'Books',
+      lang: 'Languages'
+    }
+  },
+  main: {
+  },
+  footer: {
   }
 }

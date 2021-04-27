@@ -7,6 +7,7 @@ import ElementPlus from 'element-plus'
 import 'dayjs/locale/zh-cn'
 import 'element-plus/packages/theme-chalk/src/index.scss'
 import 'element-plus/packages/theme-chalk/src/base.scss'
+import 'element-plus/packages/theme-chalk/src/display.scss'
 
 createApp(App)
   .use(router)

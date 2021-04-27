@@ -1,13 +1,16 @@
 <template>
   <el-container>
     <el-header>
-        <NavMenu/>
+      <NavMenu/>
       <div class="line"></div>
     </el-header>
+
     <main class="el-main">Main
-    <router-view/>
+      <router-view/>
     </main>
+
     <el-footer>Footer</el-footer>
+
   </el-container>
 </template>
 
