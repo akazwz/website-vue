@@ -5,7 +5,6 @@
       <div class="line"></div>
     </el-header>
     <main class="el-main">
-      {{ $t('main.main') }}
     <router-view/>
     </main>
     <el-footer>Footer</el-footer>
