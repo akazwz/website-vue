@@ -1,5 +1,8 @@
 <template>
   <p>{{ $t('main.home') }}</p>
+  <div style="height: 200px">
+    div
+  </div>
 </template>
 
 <script lang="ts">

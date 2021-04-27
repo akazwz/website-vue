@@ -53,6 +53,7 @@ export default defineComponent({
   color: #333;
   text-align: center;
   line-height: 60px;
+  padding-bottom: 100px;
 }
 
 body > .el-container {
