@@ -9,6 +9,8 @@ module.exports = {
     }
   },
   main: {
+    main: 'Main',
+    home: 'Home'
   },
   footer: {
   }

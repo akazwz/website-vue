@@ -9,6 +9,8 @@ module.exports = {
     }
   },
   main: {
+    main: '主体',
+    home: '主页'
   },
   footer: {
   }
