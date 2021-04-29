@@ -4,6 +4,7 @@ module.exports = {
       home: 'Home',
       about: 'About',
       login: 'Login',
+      register: 'Register',
       books: 'Books',
       lang: 'Languages',
       file: 'File'

@@ -52,6 +52,7 @@ export default defineComponent({
         { name: 'header.menu.home', index: '/' },
         { name: 'header.menu.about', index: '/about' },
         { name: 'header.menu.login', index: '/login' },
+        { name: 'header.menu.register', index: '/register' },
         { name: 'header.menu.books', index: '/books' },
         { name: 'header.menu.file', index: '/file-upload' }
       ],

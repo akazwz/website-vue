@@ -4,6 +4,7 @@ module.exports = {
       home: '主页',
       about: '关于',
       login: '登陆',
+      register: '注册',
       books: '图书',
       lang: '语言',
       file: '文件'

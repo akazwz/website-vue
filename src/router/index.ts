@@ -21,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "api" */ '../views/Login.vue')
   },
   {
+    path: '/register',
+    name: 'Register',
+    component: () => import(/* webpackChunkName: "api" */ '../views/Register.vue')
+  },
+  {
     path: '/books',
     name: 'Books',
     component: () => import(/* webpackChunkName: "api" */ '../views/Books.vue')
@@ -28,7 +33,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/file-upload',
     name: 'FileUpload',
-    component: () => import(/* webpackChunkName: "api" */ '../components/UploadFIle.vue')
+    component: () => import(/* webpackChunkName: "api" */ '../components/UploadFile.vue')
   }
 ]
 
