@@ -11,7 +11,7 @@
       </el-form-item>
 
       <el-form-item>
-          <upload-file/>
+          <upload-file ref="uploadFile"/>
       </el-form-item>
 
     </el-form>
@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { createToken } from '@/request/api'
-import { reactive, onMounted, defineComponent, toRefs } from 'vue'
+import { defineComponent, onMounted, reactive, toRefs } from 'vue'
 import UploadFile from '@/components/UploadFile.vue'
 
 export default defineComponent({
@@ -31,7 +31,8 @@ export default defineComponent({
     const state = reactive({
       registerForm: {
         username: 'zhaowenzhuo',
-        password: '123456'
+        password: '123456',
+        header_img: ''
       },
       books: []
     })
@@ -62,7 +63,8 @@ export default defineComponent({
         }
       })
     }
-
+    const url = () => {
+    }
     return {
       ...toRefs(state),
       register
